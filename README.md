@@ -16,13 +16,13 @@ It is **serializable** to JSON and **deserializable** from JSON, it's immutable 
 // Just use @AutoParcel annotations if you need AutoParcel
 
 @AutoValue
-@JsonSerizalize(as = Tweet.class)
+@JsonSerialize(as = Tweet.class)
 @JsonDeserialize(builder = Tweet.Builder.class)
 public abstract class Tweet {
 
   @NotNull
   public static Builder builder() {
-    return Builder().builder();
+    return Builder.builder();
   }
 
   @NotNull
